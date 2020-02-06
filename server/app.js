@@ -46,7 +46,7 @@ export const runServer = async () => {
     _logger.info('Database is initializing')
     await db(dbUrl)
 
-    const server = http.createServer(app.callback()).listen(port)
+    const server = http.createServer(app.callback()).listen(port, '0.0.0.0')
     _logger.info('Server is starting')
 
     server.on('close', () => _logger.info('Server closed'))
