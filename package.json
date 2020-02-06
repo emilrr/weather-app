@@ -14,6 +14,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/node": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
     "accesscontrol": "^2.2.1",
     "axios": "^0.19.2",
     "bcrypt": "^3.0.7",
@@ -29,9 +32,6 @@
     "winston": "^3.2.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.8.4",
-    "@babel/node": "^7.8.4",
-    "@babel/preset-env": "^7.8.4",
     "babbybel": "^1.0.0",
     "concurrently": "^5.1.0",
     "mocha": "^7.0.1",
