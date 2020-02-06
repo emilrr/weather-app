@@ -1,0 +1,102 @@
+export const forecastResponse = {
+  "data": [
+    {
+      "moonrise_ts": 1580992605,
+      "wind_cdir": "W",
+      "rh": 86,
+      "pres": 947.695,
+      "high_temp": -5.2,
+      "sunset_ts": 1581004263,
+      "ozone": 398.85,
+      "moon_phase": 0.939108,
+      "wind_gust_spd": 6.80329,
+      "snow_depth": 197.3,
+      "clouds": 66,
+      "ts": 1580940060,
+      "sunrise_ts": 1580967530,
+      "app_min_temp": -12.6,
+      "wind_spd": 2.47822,
+      "pop": 70,
+      "wind_cdir_full": "west",
+      "slp": 1022.72,
+      "valid_date": "2020-02-06",
+      "app_max_temp": -7.1,
+      "vis": 0,
+      "dewpt": -5.6,
+      "snow": 6.02649,
+      "uv": 0.564121,
+      "weather": {
+        "icon": "s04d",
+        "code": 610,
+        "description": "Mix snow/rain"
+      },
+      "wind_dir": 259,
+      "max_dhi": null,
+      "clouds_hi": 12,
+      "precip": 1.22461,
+      "low_temp": -7.5,
+      "max_temp": -1.8,
+      "moonset_ts": 1580962644,
+      "datetime": "2020-02-06",
+      "temp": -4,
+      "min_temp": -6.1,
+      "clouds_mid": 40,
+      "clouds_low": 54
+    }
+  ],
+  "city_name": "Sofia",
+  "lon": "23.32415",
+  "timezone": "Europe/Sofia",
+  "lat": "42.69751",
+  "country_code": "BG",
+  "state_code": "42"
+}
+
+export const weatherResponse = {
+  "data": [
+    {
+      "rh": 92,
+      "pod": "n",
+      "lon": 23.32415,
+      "pres": 948.124,
+      "timezone": "Europe/Sofia",
+      "ob_time": "2020-02-06 16:52",
+      "country_code": "BG",
+      "clouds": 48,
+      "ts": 1581007928,
+      "solar_rad": 0,
+      "state_code": "42",
+      "city_name": "Sofia",
+      "wind_spd": 2.52129,
+      "last_ob_time": "2020-02-06T16:35:00",
+      "wind_cdir_full": "west",
+      "wind_cdir": "W",
+      "slp": 1023.33,
+      "vis": 24.1351,
+      "h_angle": -90,
+      "sunset": "15:49",
+      "dni": 0,
+      "dewpt": -5.2,
+      "snow": 0.070944793522358,
+      "uv": 0,
+      "precip": 0,
+      "wind_dir": 276,
+      "sunrise": "05:34",
+      "ghi": 0,
+      "dhi": 0,
+      "aqi": 20,
+      "lat": 42.69751,
+      "weather": {
+        "icon": "c02n",
+        "code": "802",
+        "description": "Scattered clouds"
+      },
+      "datetime": "2020-02-06:16",
+      "temp": -4.7,
+      "station": "F5676",
+      "elev_angle": -3.37,
+      "app_temp": -10.8
+    }
+  ],
+  "count": 1
+}

@@ -1,0 +1,68 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "babel-node server",
+    "server": "nodemon --inspect=5858 --exec babel-node server",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "npm install && cd client && npm install && npm run build",
+    "test-unit": "NODE_ENV=test nyc mocha ./tests/unit/** && LINE_COVER=85 FUNC_COVER=85 BRANCH_COVER=85 STATE_COVER=85"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "accesscontrol": "^2.2.1",
+    "axios": "^0.19.2",
+    "bcrypt": "^3.0.7",
+    "chalk": "^3.0.0",
+    "joi": "^14.3.1",
+    "jsonwebtoken": "^8.5.1",
+    "koa": "^2.11.0",
+    "koa-bodyparser": "^4.2.1",
+    "koa-mount": "^4.0.0",
+    "koa-router": "^8.0.6",
+    "koa-send": "^5.0.0",
+    "koa-static": "^5.0.0",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/node": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "babbybel": "^1.0.0",
+    "concurrently": "^5.1.0",
+    "mocha": "^7.0.1",
+    "mockery": "^2.1.0",
+    "mongoose": "^5.8.11",
+    "nodemon": "^2.0.2",
+    "nyc": "^15.0.0",
+    "sinon": "^8.1.1"
+  },
+  "nyc": {
+    "reporter": [
+      "text",
+      "html",
+      "text-summary"
+    ],
+    "include": [
+      "server/**/*.js"
+    ],
+    "exclude": [
+      "node_modules/**",
+      "tests/**",
+      "coverage/**",
+      "server/routes/**/*.js",
+      "client/**"
+    ],
+    "require": [
+      "babbybel"
+    ],
+    "cache": false,
+    "sourceMap": true,
+    "instrument": true,
+    "all": true
+  }
+}
