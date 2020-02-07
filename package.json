@@ -8,7 +8,7 @@
     "server": "nodemon --inspect=5858 --exec babel-node server",
     "client": "npm run start --prefix client",
     "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
-    "heroku-postbuild": "npm install && cd client && npm install && npm run build",
+    "postbuild": "npm install && cd client && npm install && npm run build",
     "test-unit": "NODE_ENV=test nyc mocha ./tests/unit/** && LINE_COVER=85 FUNC_COVER=85 BRANCH_COVER=85 STATE_COVER=85"
   },
   "author": "",
