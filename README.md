@@ -1,5 +1,9 @@
 # Weather app
-A simple weather app that displays weather information from the Weatherbit API. 
+A simple weather app that displays weather information from the Weatherbit API.
+
+## Demo
+[Wheather-app](https://weather-platform.herokuapp.com/)
+
 ## Quick Start
 
 ```bash
