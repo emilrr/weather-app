@@ -49,7 +49,10 @@ export const runServer = async () => {
     const server = http.createServer(app.callback()).listen(port, '0.0.0.0')
     _logger.info('Server is starting')
 
-    server.on('close', () => _logger.info('Server closed'))
+    server.on('close', () => {
+      _logger.info('Server closed')
+      process.exit(1)
+    })
 
     _logger.info(`Server is started: ${os.hostname}:${port}`)
     return server

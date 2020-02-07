@@ -9,7 +9,14 @@ export default () => {
     const token = ctx.headers['x-auth-token']
 
     if (token) {
-      const { userId, exp } = await jwt.verify(token, jwtSecret)
+      let userId, exp
+      try {
+        const verifiedToken = await jwt.verify(token, jwtSecret)
+        userId = verifiedToken.userId
+        exp = verifiedToken.exp
+      } catch (err) {
+        ctx.throw(401, { name: 'AuthorizationError', message: err.message })
+      }
 
       if (exp < Date.now().valueOf() / 1000) {
         ctx.throw(401, { name: 'AuthorizationError', message: 'JWT token has expired, please login to obtain a new on!' })

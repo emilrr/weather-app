@@ -5,7 +5,7 @@ import mockery from 'mockery'
 import { forecastResponse, weatherResponse } from '../../mocks/weatherbit'
 
 describe('Unit tests for the weatherbit service', () => {
-  let sandbox, axiosStub, instanceStub
+  let sandbox, axiosStub, instanceStub, weatherbitService
 
   before(() => {
     sandbox = sinon.createSandbox()
