@@ -15,7 +15,7 @@ A simple weather app that displays weather information from the Weatherbit API.
 ```bash
 *** Run server and client with build ***
 # Install server and client dependencies
-npm run postbuild
+npm run heroku-postbuild
 
 # Run server and client
 npm run start
