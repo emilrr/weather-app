@@ -18,7 +18,7 @@ A simple weather app that displays weather information from the Weatherbit API.
 npm run postbuild
 
 # Run server and client
-NODE_ENV=production npm run start
+npm run start
 
 # Run unit tests
 npm run test-unit

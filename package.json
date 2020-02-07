@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "babel-node server",
+    "start": "NODE_ENV=production babel-node server",
     "server": "nodemon --inspect=5858 --exec babel-node server",
     "client": "npm run start --prefix client",
     "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
